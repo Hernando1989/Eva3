@@ -15,9 +15,9 @@ def obtener_token(usuario, clave):
     }
     requests.packages.urllib3.disable_warnings()
     respuesta = requests.post(url, headers=cabecera, data=json.dumps(body), verify=False)
-    token = respuesta.json()['imdata'][0]['attributes']['token']
-    return token
+    token = respuesta.json()['imdata'][0]['attributes']
 
+return token
 
 token = obtener_token("admin", "admin123!")
 print(token)
