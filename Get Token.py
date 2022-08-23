@@ -6,8 +6,8 @@ def obtener_token(usuario, clave):
     url = "https://127.0.0.1:58000/api/v1/ticket"
     body = {
             "attributes": {
-                "username": usuario,
-                "password": clave
+                "username" : "admin",
+                "password" : "admin123!"
             }
         }
     cabecera = {
@@ -19,5 +19,5 @@ def obtener_token(usuario, clave):
     return token
 
 
-token = obtener_token("admin123!", "admin")
+token = obtener_token("admin", "admin123!")
 print(token)
